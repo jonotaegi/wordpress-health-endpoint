@@ -14,6 +14,8 @@ Creates a health check API endpoint (/health) that returns an HTTP 200 OK succes
 
 Creates a health check API endpoint (/health) that returns an HTTP 200 OK success status response code.
 
+A health check client - a monitoring service, service registry or load balancer - periodically invokes the endpoint to check the health of the service instance.
+
 == Installation ==
 
 
