@@ -139,7 +139,7 @@ class HealthEndpoint_LifeCycle extends HealthEndpoint_InstallIndicator {
      * @return void
      */
     public function addSettingsSubMenuPage() {
-        $this->addSettingsSubMenuPageToPluginsMenu();
+        //$this->addSettingsSubMenuPageToPluginsMenu();
         //$this->addSettingsSubMenuPageToSettingsMenu();
     }
 
