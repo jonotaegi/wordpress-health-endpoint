@@ -3,8 +3,7 @@
 /**
  * The plugin bootstrap file
  *
- * This file is read by WordPress to generate the plugin information in the plugin admin area.
- * This file also includes all of the dependencies used by the plugin, registers the activation and deactivation functions, and defines a function that starts the plugin.
+ * This file includes all of the dependencies used by the plugin, registers the activation and deactivation functions, and defines a function that starts the plugin.
  *
  * @link              http://www.jonotaegi.com/
  * @since             1.0.0
@@ -20,7 +19,6 @@
  * License:           GPLv3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       health-endpoint
- * Domain Path:       /languages
  */
 
 // If this file is called directly, abort.
@@ -57,17 +55,14 @@ register_activation_hook( __FILE__, 'activate_health_endpoint' );
 register_deactivation_hook( __FILE__, 'deactivate_health_endpoint' );
 
 /**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
+ * The core plugin class that is used to define internationalization, admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-health-endpoint.php';
 
 /**
  * Begins execution of the plugin.
  *
- * Since everything within the plugin is registered via hooks,
- * then kicking off the plugin from this point in the file does
- * not affect the page life cycle.
+ * Since everything within the plugin is registered via hooks, then kicking off the plugin from this point in the file does not affect the page life cycle.
  *
  * @since    1.0.0
  */
