@@ -22,8 +22,8 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if (!defined('WPINC')) {
+    die;
 }
 
 /**
@@ -31,33 +31,53 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'HEALTH_ENDPOINT_VERSION', '1.0.0' );
+define('HEALTH_ENDPOINT_VERSION', '1.0.0');
 
 /**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-health-endpoint-activator.php
+ * Filter the list of public query vars in order to allow the WP::parse_request to register the query variable.
+ *
+ * @since    1.0.0
+ * @param array $public_query_vars The array of public query variables.
+ * @return array
  */
-function activate_health_endpoint() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-health-endpoint-activator.php';
-	Health_Endpoint_Activator::activate();
+function health_check_query_var($public_query_vars) {
+    $public_query_vars[] = "health_check";
+    return $public_query_vars;
 }
 
 /**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-health-endpoint-deactivator.php
+ * Hook the parse_request action and serve the health endpoint when custom query variable is set to 'true'.
+ *
+ * @since    1.0.0
+ * @param WP $wp Current WordPress environment instance
  */
-function deactivate_health_endpoint() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-health-endpoint-deactivator.php';
-	Health_Endpoint_Deactivator::deactivate();
+function health_check_request($wp) {
+    if (isset($wp->query_vars["health_check"]) && "true" === $wp->query_vars["health_check"]) {
+        // Use the global instance created by WordPress
+        global $wpdb;
+
+        // Check the connection:
+        if (!$wpdb->check_connection($allow_bail = false)) {
+            die(__("No DB connection"));
+        }
+
+        header("Content-length: 0");
+
+        exit;
+    }
 }
 
-register_activation_hook( __FILE__, 'activate_health_endpoint' );
-register_deactivation_hook( __FILE__, 'deactivate_health_endpoint' );
 
 /**
- * The core plugin class that is used to define internationalization, admin-specific hooks, and public-facing site hooks.
+ * Register the rewrite rule for /health request.
+ *
+ * @since    1.0.0
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-health-endpoint.php';
+function health_endpoint_rewrite() {
+    add_rewrite_rule("^health$", "index.php?health_check=true", "top");
+
+    flush_rewrite_rules();
+}
 
 /**
  * Begins execution of the plugin.
@@ -68,8 +88,12 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-health-endpoint.php';
  */
 function run_health_endpoint() {
 
-	$plugin = new Health_Endpoint();
-	$plugin->run();
+    add_filter("query_vars", "health_check_query_var", 10, 1);
+
+    add_action("parse_request", "health_check_request", 10, 1);
+
+    add_action("init", "health_endpoint_rewrite", 10);
 
 }
+
 run_health_endpoint();
