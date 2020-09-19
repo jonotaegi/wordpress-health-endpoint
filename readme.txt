@@ -41,15 +41,17 @@ You can find more information about the `Health Endpoint Monitoring pattern` at 
 
 = Development =
 
-This plugin is being developed on [GitHub](https://github.com/jonotaegi/wordpress-health-endpoint). Please use the Support tab for potential bugs, issues, or enhancement ideas.
+This plugin is being developed on [GitHub](https://github.com/jonotaegi/wordpress-health-endpoint). Please use the `Issues` tab for potential bugs, issues, or enhancement ideas.
 
 == Installation ==
 
 = Automatic installation =
 
-To do an automatic install of the Health Endpoint plugin, log in to your `WordPress dashboard`, navigate to the `Plugins` menu, and click `Add New.`
+1. Log in to your `WordPress dashboard`, navigate to the `Plugins` menu, and click `Add New.`
 
-In the search field type `Health Endpoint,` then click `Search Plugins.` Once you’ve found it, you can install it by clicking `Install Now,` and `WordPress` will take it from there.
+2. In the search field type `Health Endpoint,` then click `Search Plugins.`
+
+3. Once you’ve found it, you can install it by clicking `Install Now,` and `WordPress` will take it from there.
 
 = Manual installation =
 
