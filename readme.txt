@@ -1,5 +1,5 @@
 === Health Endpoint ===
-Contributors: Jon Otaegi
+Contributors: jonotaegi
 Tags: health, health check, health endpoint
 Requires at least: 3.5
 Tested up to: 5.5.1
