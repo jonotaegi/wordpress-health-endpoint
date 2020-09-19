@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+	<style type="text/css">
+		.background{fill:#006837;}
+		.check{fill:#FFFFFF;}
+		.heart{fill:#39B54A;}
+	</style>
+	<rect class="background" width="512" height="512"/>
+	<g>
+		<polygon class="check" points="207.8,304.5 165.6,346.7 213.8,394.9 213.8,394.9 256,437.1 256,437.1 298.2,394.9 367.9,325.1 367.9,325.1 389,304 346.8,261.8 256,352.6 	"/>
+		<path class="heart" d="M262,122.8L262,122.8l-6,6l-6-6c-42.5-42.5-111.6-42.5-154.1,0s-42.5,111.6,0,154.1l0,0l6,6l21.5,21.5 l21.1,21.1l42.2-42.2l-21.1-21.1l-27.5-27.5c-19.2-19.2-19.2-50.5,0-69.7s50.5-19.2,69.7,0l48.2,48.2l48.2-48.2 c19.2-19.2,50.5-19.2,69.7,0c19.2,19.2,19.2,50.5,0,69.7l-6,6l42.2,42.2l6-6c42.5-42.5,42.5-111.6,0-154.1S304.5,80.3,262,122.8z" />
+	</g>
+</svg>
