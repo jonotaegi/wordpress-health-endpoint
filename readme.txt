@@ -1,6 +1,6 @@
 === Health Endpoint ===
 Contributors: jonotaegi
-Tags: health, health check, health endpoint
+Tags: health check, api, endpoint, monitor, uptime, performance
 Requires at least: 3.5
 Tested up to: 5.5.1
 Stable tag: 1.0.0
