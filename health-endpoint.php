@@ -12,7 +12,7 @@
  * @wordpress-plugin
  * Plugin Name:       Health Endpoint
  * Plugin URI:        http://wordpress.org/extend/plugins/health-endpoint/
- * Description:       Creates a health check API endpoint (/health) that returns an HTTP 200 OK success status response code.
+ * Description:       Creates a health check API endpoint (/health) that returns an HTTP 200 OK success status response code if WordPress is performing correctly.
  * Version:           1.0.0
  * Author:            Jon Otaegi
  * Author URI:        http://www.jonotaegi.com/
