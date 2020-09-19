@@ -19,7 +19,7 @@ You can find more information about the [Health Endpoint Monitoring Pattern](htt
 
 = Development =
 
-This plugin is being developed on [GitHub](https://github.com/jonotaegi/wordpress-health-endpoint). Please use the "Issues" tab for potential bugs, issues, or enhancement ideas.
+This plugin is being developed on [GitHub](https://github.com/jonotaegi/wordpress-health-endpoint). If you want to collaborate, feel free to submit pull requests or report bugs on the issue tracker.
 
 == Installation ==
 
