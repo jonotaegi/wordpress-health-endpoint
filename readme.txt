@@ -2,7 +2,7 @@
 Contributors: jonotaegi
 Tags: health check, api, endpoint, monitor, uptime, performance
 Requires at least: 3.5
-Tested up to: 5.5.1
+Tested up to: 5.8.1
 Stable tag: 1.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
