@@ -3,7 +3,7 @@ Contributors: jonotaegi
 Tags: health check, api, endpoint, monitor, uptime, performance
 Requires at least: 3.5
 Tested up to: 5.8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,9 @@ This plugin is being developed on [GitHub](https://github.com/jonotaegi/wordpres
 == Screenshots ==
 
 == Changelog ==
+
+= 1.0.1 =
+* Tested with the latest WordPress release (5.8.1).
 
 = 1.0.0 =
 * Initial release.
