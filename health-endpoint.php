@@ -13,7 +13,7 @@
  * Plugin Name:       Health Endpoint
  * Plugin URI:        http://wordpress.org/extend/plugins/health-endpoint/
  * Description:       Creates a /health endpoint that returns a 200 OK HTTP status code while WordPress is performing correctly.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Jon Otaegi
  * Author URI:        http://www.jonotaegi.com/
  * License:           GPLv3
